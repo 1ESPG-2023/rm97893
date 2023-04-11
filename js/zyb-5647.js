@@ -15,3 +15,8 @@ let nr3 = [nr1=nr2]
 console.log(`Array-1 ${nr1}`);
 console.log(`Array-2 ${nr2}`);
 console.log(`Array-3 ${nr3}`);
+
+//Listando um array! Técnica Especial!
+nr3.forEach((ItemDoArray)=>{
+    console.log(`Array-3 sendo listado ${ItemDoArray}`);
+})
