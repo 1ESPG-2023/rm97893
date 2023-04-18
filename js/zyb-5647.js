@@ -46,6 +46,13 @@ nr3.map((numero,key)=>{
 const liElementHtml = document.getElementsByTagName("li");
 const liElementArray = [...liElementHtml];
 
+// Mostrando todos os itens da lista como array
+// liElementArray.map((item,key)=>{
+//     console.log(`${key+1} - Itens do li - ${item.textContent}`);
+// })
+
+// Localizar item especifico
 liElementArray.map((item,key)=>{
-    console.log(`${key+1} - Itens do li - ${item.textContent}`);
+    if (item.textContent == "Item-39")
+        console.log(`${key+1} - ${item.textContent = "LOCALIZADO"}`);
 })
