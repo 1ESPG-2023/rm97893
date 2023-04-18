@@ -68,10 +68,10 @@
 // }
 
 // Arrow Function
-const mudaCor = ()=>{
+// const mudaCor = ()=>{
     
-    // FUNÇÃO SET-TIME-OUT
-    setTimeout(soma(1,2,3),5000);
-}
+//     // FUNÇÃO SET-TIME-OUT
+//     setTimeout(soma(1,2,3),5000);
+// }
 
-soma();
+// soma();
