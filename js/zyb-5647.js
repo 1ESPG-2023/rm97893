@@ -57,11 +57,21 @@
 //         console.log(`${key+1} - ${item.textContent = "LOCALIZADO"}`);
 // })
 
-function soma(parametro) {
-    nr1 = 10;
-    nr2 = 5;
+// function soma(parametro) {
+//     nr1 = 10;
+//     nr2 = 5;
 
-    console.log(`Resultado : ${parseInt(nr1) + parseInt(nr2) + parseInt(parametro)}`);
-    console.log(`Este é o parâmetro que foi passado para a função : ${parametro}`);
+//     return (parseInt(nr1) + parseInt(nr2) + parseInt(parametro))
+
+//     console.log(`Resultado : ${parseInt(nr1) + parseInt(nr2) + parseInt(parametro)}`);
+//     console.log(`Este é o parâmetro que foi passado para a função : ${parametro}`);
+// }
+
+// Arrow Function
+const mudaCor = ()=>{
+    
+    // FUNÇÃO SET-TIME-OUT
+    setTimeout(soma(1,2,3),5000);
 }
 
+soma();
