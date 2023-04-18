@@ -1,58 +1,67 @@
-// const liElement = document.getElementsByTagName("li");
+// // const liElement = document.getElementsByTagName("li");
 
-// for (let index = 0; index < liElement.length ; index++) {
-//     console.log(liElement[index].textContent)
+// // for (let index = 0; index < liElement.length ; index++) {
+// //     console.log(liElement[index].textContent)
     
-// }
-// console.log(liElement.length);
+// // }
+// // console.log(liElement.length);
 
-//Declaração de Arrays
+// //Declaração de Arrays
+// // let nr1 = [1,2,3,4,5];
+// // let nr2 = [6,7,8,9,10];
+// // let nr3 = [nr1,nr2]
+
+// // console.log(`Array-1 ${nr1}`);
+// // console.log(`Array-2 ${nr2}`);
+// // console.log(`Array-3 ${nr3}`);
+
+// //Listando um array! Técnica Especial!
+// // nr3.forEach((ItemDoArray)=>{
+// //     console.log(`Array-3 sendo listado ${ItemDoArray}`);
+// // })
+
+// // Listando o Array com MAP
+// // nr3.map((numero,key)=>{
+// //     console.log(`${key+1} - Itens do array - ${numero}`);
+// //     numero.forEach((digitos)=>{
+// //         console.log(digitos)
+// //     })
+// // })
+
+// //Declaração de Arrays para uso do SPREAD
 // let nr1 = [1,2,3,4,5];
 // let nr2 = [6,7,8,9,10];
-// let nr3 = [nr1,nr2]
+// // Espalhar o array com SPREAD [ ... ]
+// let nr3 = [...nr1,...nr2]
 
 // console.log(`Array-1 ${nr1}`);
 // console.log(`Array-2 ${nr2}`);
 // console.log(`Array-3 ${nr3}`);
 
-//Listando um array! Técnica Especial!
-// nr3.forEach((ItemDoArray)=>{
-//     console.log(`Array-3 sendo listado ${ItemDoArray}`);
-// })
-
-// Listando o Array com MAP
 // nr3.map((numero,key)=>{
-//     console.log(`${key+1} - Itens do array - ${numero}`);
-//     numero.forEach((digitos)=>{
-//         console.log(digitos)
-//     })
+//      console.log(`${key+1} - Itens do array - ${numero}`);
 // })
 
-//Declaração de Arrays para uso do SPREAD
-let nr1 = [1,2,3,4,5];
-let nr2 = [6,7,8,9,10];
-// Espalhar o array com SPREAD [ ... ]
-let nr3 = [...nr1,...nr2]
+// // Convertendo HTMLCollection em Array de forma indireta
+// const liElementHtml = document.getElementsByTagName("li");
+// const liElementArray = [...liElementHtml];
 
-console.log(`Array-1 ${nr1}`);
-console.log(`Array-2 ${nr2}`);
-console.log(`Array-3 ${nr3}`);
+// // Mostrando todos os itens da lista como array
+// // liElementArray.map((item,key)=>{
+// //     console.log(`${key+1} - Itens do li - ${item.textContent}`);
+// // })
 
-nr3.map((numero,key)=>{
-     console.log(`${key+1} - Itens do array - ${numero}`);
-})
-
-// Convertendo HTMLCollection em Array de forma indireta
-const liElementHtml = document.getElementsByTagName("li");
-const liElementArray = [...liElementHtml];
-
-// Mostrando todos os itens da lista como array
+// // Localizar item especifico
 // liElementArray.map((item,key)=>{
-//     console.log(`${key+1} - Itens do li - ${item.textContent}`);
+//     if (item.textContent == "Item-39")
+//         console.log(`${key+1} - ${item.textContent = "LOCALIZADO"}`);
 // })
 
-// Localizar item especifico
-liElementArray.map((item,key)=>{
-    if (item.textContent == "Item-39")
-        console.log(`${key+1} - ${item.textContent = "LOCALIZADO"}`);
-})
+function soma(parametro) {
+    nr1 = 10;
+    nr2 = 5;
+
+    console.log(`Resultado : ${parseInt(nr1) + parseInt(nr2) + parseInt(parametro)}`);
+    console.log(`Este é o parâmetro que foi passado para a função : ${parametro}`);
+}
+

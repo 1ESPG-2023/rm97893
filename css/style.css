@@ -1,0 +1,30 @@
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    background-color: rgba(148, 233, 233, 0.801);
+    color: rgb(31, 124, 247);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 60vh;
+    background-color: rgb(138, 190, 214);
+}
+.central {
+    flex-grow: 1;
+}
+
+.container .l-e {
+    flex-grow: 1;
+    background-color: rgb(114, 177, 206);
+}
+
+.container .l-d {
+    flex-grow: 1;
+    background-color: rgb(167, 211, 231);
+}
