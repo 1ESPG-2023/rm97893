@@ -10,13 +10,21 @@ const liElement = document.getElementsByTagName("li");
 //Declaração de Arrays
 let nr1 = [1,2,3,4,5];
 let nr2 = [6,7,8,9,10];
-let nr3 = [nr1=nr2]
+let nr3 = [nr1,nr2]
 
 console.log(`Array-1 ${nr1}`);
 console.log(`Array-2 ${nr2}`);
 console.log(`Array-3 ${nr3}`);
 
 //Listando um array! Técnica Especial!
-nr3.forEach((ItemDoArray)=>{
-    console.log(`Array-3 sendo listado ${ItemDoArray}`);
+// nr3.forEach((ItemDoArray)=>{
+//     console.log(`Array-3 sendo listado ${ItemDoArray}`);
+// })
+
+// Listando o Array com MAP
+nr3.map((numero,key)=>{
+    console.log(`${key+1} - Itens do array - ${numero}`);
+    numero.forEach((digitos)=>{
+        console.log(digitos)
+    })
 })
