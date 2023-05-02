@@ -115,9 +115,29 @@ function alteraBanner(){
 
 // alteraBanner();
 
-function ligaDesliga() {
+const botao = document.querySelector(".central button");
 
+botao.addEventListener("click", ()=>{
     const imgLampada = document.querySelector(".central img");
 
-    const botao = document.querySelector(".central button");
-}
+    if(this.textContent == "LIGAR") {
+        imgLampada.src = "/img/pic_bulbon.gif"
+        botao.textContent = "DESLIGAR";
+    } else{
+        imgLampada.src = "/img/pic_bulboff.gif"
+        botao.textContent = "LIGAR";
+    }
+} );    
+
+// function ligaDesliga() {
+
+    // const imgLampada = document.querySelector(".central img");
+
+    // if(botao.textContent == "LIGAR") {
+    //     imgLampada.src = "/img/pic_bulbon.gif"
+    //     botao.textContent = "DESLIGAR";
+    // } else{
+    //     imgLampada.src = "/img/pic_bulboff.gif"
+    //     botao.textContent = "LIGAR";
+    // }
+// }
