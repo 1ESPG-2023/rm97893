@@ -75,3 +75,47 @@
 // }
 
 // soma();
+
+//FUNÇÃO MUDA COR
+
+function mudaCor(){
+
+    let r = ""
+    let g = ""
+    let b = ""
+
+    //math - random= que gera números aleatórios entre 0 e 1 
+    //ceil, floor e round que arredondam o número para cima, para baixo ou aleatóriamente  
+    
+    //determinando para a variavel R um valor entre 0 e 255
+    r = Math.round(Math.random() * 255) 
+    g = Math.round(Math.random() * 255) 
+    b = Math.round(Math.random() * 255) 
+    
+    const cabecalho = document.querySelector(".cabecalho")
+    cabecalho.setAttribute("style", `background-color:rgb( ${r}, ${g}, ${b})`)
+
+    tmp = setTimeout(mudaCor,1000)
+}
+
+//FUNÇÃO ALTERA BANNER
+function alteraBanner(){
+
+    let nr = Math.ceil(Math.random() * 3);
+    
+    const img1 = document.querySelector(".l-e > img");
+    const img2 = document.querySelector(".l-d > img");
+
+    let caminho = `./img/banner-lateral-${nr}.png` 
+    img1.src = caminho
+    img2.src = caminho 
+    
+    setTimeout(mudaBanner,1000);
+}
+
+// alteraBanner();
+
+function ligaDesliga() {
+
+    const imgLampada = document.querySelector(".central img");
+}
