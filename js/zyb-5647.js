@@ -118,4 +118,6 @@ function alteraBanner(){
 function ligaDesliga() {
 
     const imgLampada = document.querySelector(".central img");
+
+    const botao = document.querySelector(".central button");
 }
