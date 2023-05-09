@@ -31,9 +31,15 @@ addEventListener("click" ,(evento)=>{
         // let senha = document.querySelector("#idPass").value;
         
         //Armazenando os dados no OBJETO
-        usuario.nomeUsuario = document.querySelector("#idUser").value;
-        usuario.senhaUsuario = document.querySelector("#idPass").value;
+        // usuario.nomeUsuario = document.querySelector("#idUser").value;
+        // usuario.senhaUsuario = document.querySelector("#idPass").value;
         
+        let lista = JSON.parse(localStorage.getItem("listaUser"));
+
+        lista.array.forEach((usuario) => {
+            console.log(usuario.nomeUsuario);
+        });
+
         const h1titulo = document.querySelector("#titulo");
 
         //VALIDAÇÃO
