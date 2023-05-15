@@ -10,46 +10,53 @@ const usuario2 = {
     senhaUsuario:"12345"
 }
 
-localStorage.setItem("user1",usuario1);
-localStorage.setItem("user2",usuario2);
+let listaDeUsuarios = [];
+listaDeUsuarios.push(usuario1);
+listaDeUsuarios.push(usuario2);
+
+localStorage.setItem("listaUser",  JSON.stringify(listaDeUsuarios));
+
 
 //VAMOS CRIAR UM OBJETO PARA ARMAZENAR O NOSSO USUÁRIO
-const usuario = {
-    nomeUsuario:"",
-    senhaUsuario:""
-}
+// const usuario = {
+//     nomeUsuario:"",
+//     senhaUsuario:""
+// }
 
- 
 
-addEventListener("click" ,(evento)=>{
+
+addEventListener("click",(evento)=>{
 
     evento.preventDefault();
 
-    // console.log(evento.target.id == "btnSubmit");
     if(evento.target.id == "btnSubmit"){
         // let usuario = document.querySelector("#idUser").value;
         // let senha = document.querySelector("#idPass").value;
+       
+        // RECUPERANDO DOS IMPUTS
+        let inputUserValue = document.querySelector("#idUser").value;
+        let inputPassValue = document.querySelector("#idPass").value;
         
-        //Armazenando os dados no OBJETO
-        // usuario.nomeUsuario = document.querySelector("#idUser").value;
-        // usuario.senhaUsuario = document.querySelector("#idPass").value;
-        
+        const h1Titulo = document.querySelector("#titulo");
+
         let lista = JSON.parse(localStorage.getItem("listaUser"));
-
-        lista.array.forEach((usuario) => {
-            console.log(usuario.nomeUsuario);
-        });
-
-        const h1titulo = document.querySelector("#titulo");
-
-        //VALIDAÇÃO
-        if(usuario.nomeUsuario == "rm97893" && senha.senhaUsuario == "12345"){
-            console.log("VALIDADO");
-            h1titulo.innerHTML = "Bem Vindo : " + usuario.nomeUsuario;
-        }else{
-            console.log("NÃO VALIDADO");
-            h1titulo.innerHTML = "";
-        }
-
+        const BreakError = {};
+        try{
+            lista.forEach((usuario)=> {
+                //VALIDAÇÃO
+                if(inputUserValue == usuario.nomeUsuario && inputPassValue == usuario.senhaUsuario){
+                h1Titulo.innerHTML = "Bem vindo : " + usuario.nomeUsuario;
+                throw "VALIDADO";
+                }else{ 
+                    throw "NÃO VALIDADO";
+                }
+            });
+        }catch(err){
+            if(err == "VALIDADO"){
+                console.log("VALIDADO");
+            }else{
+                console.log("NÃO VALIDADO");
+            }
+        }       
     }
 });
