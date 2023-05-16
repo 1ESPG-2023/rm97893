@@ -40,22 +40,27 @@ addEventListener("click",(evento)=>{
         const h1Titulo = document.querySelector("#titulo");
 
         let lista = JSON.parse(localStorage.getItem("listaUser"));
-        const BreakError = {};
+        
         try{
             lista.forEach((usuario)=> {
                 //VALIDAÇÃO
                 if(inputUserValue == usuario.nomeUsuario && inputPassValue == usuario.senhaUsuario){
-                h1Titulo.innerHTML = "Bem vindo : " + usuario.nomeUsuario;
-                throw "VALIDADO";
-                }else{ 
-                    throw "NÃO VALIDADO";
+                    throw "VALIDADO";
                 }
             });
-        }catch(err){
-            if(err == "VALIDADO"){
-                console.log("VALIDADO");
+
+                throw "NÃO VALIDADO";
+
+        }catch(msg){
+            if(msg == "VALIDADO"){
+                h1Titulo.innerHTML = "<span><strong>Login validado com sucesso!</strong></span>";
+                h1Titulo.setAttribute("style","color:#00ff00;");
+                //Direcionando o usuário para a página de sucesso!
+                window.location.href = "/rm97893/sucesso.html";
             }else{
-                console.log("NÃO VALIDADO");
+                h1Titulo.innerHTML = "<span><strong>Login ou senha inválidos!</strong></span>";
+                h1Titulo.setAttribute("style","color:#ff0000;");
+                window.location.href = "/rm97893/erro.html";
             }
         }       
     }
