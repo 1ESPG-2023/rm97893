@@ -88,14 +88,17 @@ addEventListener("click",(evento)=>{
 
                 setTimeout(()=>{
                     //Direcionando o usuário para a página de sucesso!
-                    window.location.href = "../sucesso.html";
+                    window.location.href = "/rm97893/sucesso.html";
                 }, 3000)
 
 
             }else{
                 h1Titulo.innerHTML = "<span><strong>Login ou senha inválidos!</strong></span>";
                 h1Titulo.setAttribute("style","color:#ff0000;");
-                window.location.href = "../erro.html";
+                setTimeout(()=>{
+                    //Direcionando o usuário para a página de sucesso!
+                    window.location.href = "/rm97893/erro.html";
+                }, 3000)
             }
         }       
     }
