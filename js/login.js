@@ -1,18 +1,30 @@
-
-//GERANDO DOIS OBJETOS NO LOCALSTORAGE
-const usuario1 = {
-    nomeUsuario:"predo",
-    senhaUsuario:"12345"
-}
-
-const usuario2 = {
-    nomeUsuario:"anzina",
-    senhaUsuario:"12345"
-}
-
-let listaDeUsuarios = [];
-listaDeUsuarios.push(usuario1);
-listaDeUsuarios.push(usuario2);
+//GERANDO UMA LISTA DE USUÁRIOS
+let listaDeUsuarios = [
+    {
+        nomeCompleto : "Pedro Silva",
+        nomeUsuario : "99482",
+        senhaUsuario : "123456",
+        avatarUsuario : "htpps://www2.fiap.com.br/FotosAlunos/A02ADF18E02E4CFFBA1DB78235EAA910/99482.jpg"
+    },
+    {
+        nomeCompleto : "Ana Paula",
+        nomeUsuario : "98065",
+        senhaUsuario : "123456",
+        avatarUsuario : "htpps://www2.fiap.com.br/FotosAlunos/A02ADF18E02E4CFFBA1DB78235EAA910/99482.jpg"
+    },
+    {
+        nomeCompleto : "Henrique Rico",
+        nomeUsuario : "98831",
+        senhaUsuario : "123456",
+        avatarUsuario : "htpps://www2.fiap.com.br/FotosAlunos/A02ADF18E02E4CFFBA1DB78235EAA910/99482.jpg"
+    },
+    {
+        nomeCompleto : "Guilherme Hora",
+        nomeUsuario : "99499",
+        senhaUsuario : "123456",
+        avatarUsuario : "htpps://www2.fiap.com.br/FotosAlunos/A02ADF18E02E4CFFBA1DB78235EAA910/99482.jpg"
+    },
+];
 
 localStorage.setItem("listaUser",  JSON.stringify(listaDeUsuarios));
 
@@ -34,7 +46,7 @@ addEventListener("click",(evento)=>{
         // let senha = document.querySelector("#idPass").value;
        
         // RECUPERANDO DOS IMPUTS
-        let inputUserValue = document.querySelector("#idUser").value;
+        let inputRMValue = document.querySelector("#idRm").value;
         let inputPassValue = document.querySelector("#idPass").value;
         
         const h1Titulo = document.querySelector("#titulo");
@@ -49,7 +61,7 @@ addEventListener("click",(evento)=>{
         try{
             lista.forEach((usuario)=> {
                 //VALIDAÇÃO
-                if(inputUserValue == usuario.nomeUsuario && inputPassValue == usuario.senhaUsuario){
+                if(inputRMValue == usuario.nomeUsuario && inputPassValue == usuario.senhaUsuario){
                     userValidado = usuario;
                     throw "VALIDADO";
                 }
@@ -73,8 +85,12 @@ addEventListener("click",(evento)=>{
                 //Atualizando o token no LocalStorage
                 localStorage.setItem("user-token",  JSON.stringify(token));
 
-                //Direcionando o usuário para a página de sucesso!
-                window.location.href = "../sucesso.html";
+
+                setTimeout(()=>{
+                    //Direcionando o usuário para a página de sucesso!
+                    window.location.href = "../sucesso.html";
+                }, 3000)
+
 
             }else{
                 h1Titulo.innerHTML = "<span><strong>Login ou senha inválidos!</strong></span>";
