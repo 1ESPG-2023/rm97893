@@ -1,33 +1,33 @@
+
 //GERANDO UMA LISTA DE USUÁRIOS
 let listaDeUsuarios = [
     {
         nomeCompleto : "Pedro Silva",
-        nomeUsuario : "99482",
-        senhaUsuario : "123456",
-        avatarUsuario : "htpps://www2.fiap.com.br/FotosAlunos/A02ADF18E02E4CFFBA1DB78235EAA910/99482.jpg"
+        nomeUsuario : "101010",
+        senhaUsuario: "123456",
+        avatarUsuario:"url"
     },
     {
         nomeCompleto : "Ana Paula",
-        nomeUsuario : "98065",
-        senhaUsuario : "123456",
-        avatarUsuario : "htpps://www2.fiap.com.br/FotosAlunos/A02ADF18E02E4CFFBA1DB78235EAA910/99482.jpg"
+        nomeUsuario : "101010",
+        senhaUsuario: "123456",
+        avatarUsuario:"url"
     },
     {
         nomeCompleto : "Henrique Rico",
-        nomeUsuario : "98831",
-        senhaUsuario : "123456",
-        avatarUsuario : "htpps://www2.fiap.com.br/FotosAlunos/A02ADF18E02E4CFFBA1DB78235EAA910/99482.jpg"
+        nomeUsuario : "101010",
+        senhaUsuario: "123456",
+        avatarUsuario:"url"
     },
     {
         nomeCompleto : "Guilherme Hora",
-        nomeUsuario : "99499",
-        senhaUsuario : "123456",
-        avatarUsuario : "htpps://www2.fiap.com.br/FotosAlunos/A02ADF18E02E4CFFBA1DB78235EAA910/99482.jpg"
-    },
+        nomeUsuario : "101010",
+        senhaUsuario: "123456",
+        avatarUsuario:"url"
+    }
 ];
 
 localStorage.setItem("listaUser",  JSON.stringify(listaDeUsuarios));
-
 
 //VAMOS CRIAR UM OBJETO PARA ARMAZENAR O NOSSO USUÁRIO
 // const usuario = {
@@ -84,21 +84,20 @@ addEventListener("click",(evento)=>{
 
                 //Atualizando o token no LocalStorage
                 localStorage.setItem("user-token",  JSON.stringify(token));
-
-
+                
                 setTimeout(()=>{
                     //Direcionando o usuário para a página de sucesso!
-                    window.location.href = "/rm97893/sucesso.html";
-                }, 3000)
-
+                    window.location.href = "../sucesso.html";
+                }, 3000);
 
             }else{
                 h1Titulo.innerHTML = "<span><strong>Login ou senha inválidos!</strong></span>";
                 h1Titulo.setAttribute("style","color:#ff0000;");
                 setTimeout(()=>{
-                    //Direcionando o usuário para a página de sucesso!
-                    window.location.href = "/rm97893/erro.html";
-                }, 3000)
+                    //Direcionando o usuário para a página de erro!
+                    window.location.href = "../erro.html";
+                }, 3000);
+                
             }
         }       
     }
@@ -129,3 +128,6 @@ addEventListener("click",(evento)=>{
 //         window.location.href = "../login.html";
 //     }
 // }
+
+
+
